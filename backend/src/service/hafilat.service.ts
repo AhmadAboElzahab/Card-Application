@@ -9,7 +9,7 @@ interface CardInfo {
 }
 
 async function hafilatCardInfo(serialNumber: string): Promise<CardInfo> {
-  const browser: Browser = await puppeteer.launch({ headless: true });
+  const browser: Browser = await puppeteer.launch({ headless: 'new' });
   const page: Page = await browser.newPage();
   const cardInfo: CardInfo = { message: 'Error fetching card info' };
 
