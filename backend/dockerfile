@@ -6,6 +6,6 @@ COPY package*.json ./
 RUN npm ci --verbose
 COPY ./ ./
 RUN npm run build
-EXPOSE 8082
+EXPOSE 8080
 ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
 CMD ["npm", "start"]
