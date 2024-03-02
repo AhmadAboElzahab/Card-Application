@@ -1,5 +1,4 @@
-FROM ghcr.io/puppeteer/puppeteer:20.11.1
-
+FROM node:current-alpine
 RUN apk add chromium
 
 WORKDIR /app
