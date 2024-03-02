@@ -1,12 +1,12 @@
 {
   "name": "scrapers",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.ts",
+  "description": "Description of your project",
+  "main": "index.js",
   "scripts": {
     "dev": "nodemon",
-    "start": "node ./build/index.ts",
-    "build": "tsc --build"
+    "start": "node ./build/index.js",
+    "build": "tsc"
   },
   "author": "Ahmad Abo Elzahab",
   "license": "ISC",
@@ -29,8 +29,7 @@
     "nodemon": "^3.0.2",
     "puppeteer": "^21.6.1",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "ts-node": "^10.9.2"
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "@types/express": "^4.17.21",
