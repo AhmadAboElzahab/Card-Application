@@ -11,7 +11,7 @@ const getHafilatCardInfo = async (
     return res.status(STATUS_CODES.BAD_REQUEST).json({ error: 'Card Number is Requierd' });
   }
   const regex = /^0{16}$/;
-  if (!regex.test(cardNumber)) {
+  if (regex.test(cardNumber)) {
     return res
       .status(STATUS_CODES.BAD_REQUEST)
       .json({ error: "Input does not match the required format '000000000000000'" });
