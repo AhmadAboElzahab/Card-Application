@@ -1,0 +1,11 @@
+FROM node:current-alpine
+RUN apk add chromium
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --verbose
+COPY ./ ./
+RUN npm run build
+EXPOSE 8082
+ENV PUPPETEER_SKIP_CHROMIUM_DOWNLOAD true
+CMD ["npm", "start"]
