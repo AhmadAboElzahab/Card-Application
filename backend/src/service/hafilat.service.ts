@@ -10,6 +10,7 @@ interface CardInfo {
 
 async function hafilatCardInfo(serialNumber: string): Promise<CardInfo> {
   const browser: Browser = await puppeteer.launch({
+    timeout: 0,
     headless: 'new',
     executablePath: '/usr/bin/chromium',
     args: ['--disable-gpu', '--disable-dev-shm-usage', '--disable-setuid-sandbox', '--no-sandbox'],
