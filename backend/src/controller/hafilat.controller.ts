@@ -1,7 +1,6 @@
 import { Request, Response } from 'express';
 import STATUS_CODES from 'http-status-codes';
 import hafilatCardInfo from '../service/hafilat.service';
-
 const getHafilatCardInfo = async (
   req: Request<{ cardNumber: string }, {}, { cardNumber: string }>,
   res: Response,
